@@ -1,8 +1,11 @@
 {
   "name": "taskflow-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
+    "start": "node ./build/index.js",
+    "dev": "nodemon ./src/index.ts",
+    "build": "tsc --build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +15,7 @@
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
@@ -20,7 +24,11 @@
     "sequelize": "^6.37.6"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "eslint": "^9.22.0",
-    "prettier": "^3.5.3"
+    "nodemon": "3.1.9",
+    "prettier": "^3.5.3",
+    "ts-node": "10.9.2",
+    "typescript": "5.8.2"
   }
 }
